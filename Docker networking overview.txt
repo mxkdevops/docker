@@ -1,0 +1,68 @@
+
+################ Docker netowking command####################
+
+
+# Check all the netowork command   of a docker
+docker network --help
+
+# Check list of netowk in docker 
+docker network ls 
+
+# Create a network 
+
+deocker network create <NAME>
+docker  network create  br00
+docker network  create  br01
+docker netowkr  create br02
+
+#Getting detialed of a netowrk /Inspect the newly created network
+dockerk network inspect br00
+docker  network inspect br01
+
+#Removing a netowork 
+docker network rm br00
+docker network rm br01
+
+#Connect to docker netowkr with mentioning the container 
+docker netowkr connect br01 netowrk-test03
+
+#disconnect docker network with network container 
+docker  network disconnect br01 network-test03
+
+# Remove all unused networks 
+docker network prune 
+
+# List of netork interface
+ifconfig
+
+# If ifconfig not working then install net-tools package 
+sudo yum install net-tools 
+
+
+# ip command can displayh ip address and associated interfaces 
+ip add show 
+
+#Create new container with nginx image 
+docker container run -d --name netowrk-test03 -p 8081:80 nginx
+
+
+
+
+#Container network model (CNM)
+
+#Netwrok drivers 
+
+Bridge 
+Host
+Overlay 
+macvlan
+none
+Network plugin
+
+#Define builing blocks components
+
+Sandboxes 
+
+Endpoints
+
+Network
